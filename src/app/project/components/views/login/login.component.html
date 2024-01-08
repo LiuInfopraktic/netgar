@@ -1,0 +1,18 @@
+<section>
+    <div class="intro">
+        <img src="assets/pure_icon.svg">
+    </div>
+    <div class="login_form">
+        <h5>Benvingut!</h5>
+        <p>Introdueix les teves credencials</p>
+        <input type="text" #input>
+        <div class="numbers">
+            <div class="number" *ngFor="let n of this.numbers" (click)="addNum(n, input)">
+                {{n>-1 ? n : ''}}
+                <i class='fa-solid fa-broom' *ngIf="n == -1"></i>
+                <i class='fa-solid fa-delete-left' *ngIf="n == -2"></i>
+            </div>
+        </div>
+        <button class="primary_button rounded">entrar</button>
+    </div>
+</section>
